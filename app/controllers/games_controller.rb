@@ -67,7 +67,7 @@ class GamesController < ApplicationController
   def calc_score(answer, grid, start_time, end_time)
     # calculate score in function of own custom rules
     if test_answer_letters(answer, grid) && test_answer_dico(answer)
-      score = answer.size - ((end_time - start_time) * 0.001)
+      score = (answer.size ** 1.5) - ((end_time - start_time) * 0.001)
       score.positive? ? score : 0
     else
       0
