@@ -1,0 +1,21 @@
+<h1>New game!</h1>
+<ul>
+  <% @letters.each do |letter| %>
+    <div>
+      <li>
+        <%= letter%>
+      </li>
+    </div>
+  <% end %>
+</ul>
+<div>
+  <label for="answer" class="mb-3 mt-3"><strong>Gimme your best shot:</strong></label>
+  <form action="/score" method="post" class="input-group">
+
+    <input type="text" name="answer" id="answer" class="form-control" placeholder="type your word here">
+    <button type="submit" class="btn btn-primary rounded">Play</button>
+    <%= hidden_field_tag "grid", @letters %>
+    <%= hidden_field_tag "start_time", @start_time %>
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  </form>
+</div>

@@ -1,0 +1,48 @@
+// Place all the styles related to the games controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+body {
+  background-color: rgba(245,245,245,0.8);
+  padding: 16px;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+
+  div {
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgb(11, 94, 215);
+    opacity: 0.8;
+    color: white;
+    font-size: larger;
+    font-family: 'Courier New', Courier, monospace;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+
+    &:hover {
+      opacity:1;
+      cursor: pointer;
+  }
+  }
+}
+
+button a {
+  color: white;
+  text-decoration: none;
+  &:hover {
+    color: white;
+  }
+}
